@@ -1,0 +1,110 @@
+// .side__bar {
+//     position: fixed;
+//     bottom: 15rem;
+//    width: 100%;
+//     display: flex;
+
+
+
+//     &--text {
+//         font-size: 2rem;
+//         color: rgb(255, 255, 255);
+//         width: 20%;
+//         // transform: rotate(90deg);
+
+
+
+//         // /* Legacy vendor prefixes that you probably don't need... */
+
+//         // /* Safari */
+//         // -webkit-transform: rotate(90deg);
+
+//         // /* Firefox */
+//         // -moz-transform: rotate(90deg);
+
+//         // /* IE */
+//         // -ms-transform: rotate(90deg);
+
+
+//     }
+
+//     &--line {
+//         background: red;
+//         width: 80%;
+//         height: 1px;
+//         margin: auto;
+//     }
+
+
+//     //     /* Legacy vendor prefixes that you probably don't need... */
+
+//     //     /* Safari */
+//     //     -webkit-transform: rotate(90deg);
+
+//     //     /* Firefox */
+//     //     -moz-transform: rotate(90deg);
+
+//     //     /* IE */
+//     //     -ms-transform: rotate(90deg);
+
+//     // }
+
+
+//     &--right {
+//         right: 1rem;
+//         width: 10%;
+
+
+//     }
+
+//     &--left {
+//         left: 1rem;
+//         width: 10%;
+
+
+
+//     }
+// }
+
+.side__bar--right {
+    // position: fixed;
+    bottom: 15rem;
+    right: -22rem;
+    font-size: 1.8rem;
+    color: var(--color-secondary-1);
+    letter-spacing: .1rem;
+    // transform: rotateZ(90deg);
+
+
+    ::after {
+        content: '';
+        width: 54rem;
+        background-color:var(--color-grey-dark-2);
+        height: 1px;
+        display: block;
+    }
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.side__bar--left {
+    position: fixed;
+    bottom: 10rem;
+    left: -20rem;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    color: var(--color-secondary-1);
+    transform: rotateZ(90deg);
+
+    ::before {
+        content: '';
+        width: 50rem;
+        background-color:var(--color-grey-dark-2);
+        height: 1px;
+        display: block;
+    }
+    @include respond(phone) {
+        display: none;
+    }
+}

@@ -1,0 +1,265 @@
+.logo {
+    -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    background-color: var(--color-secondary-1);
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    @include animationDelay;
+
+    span {
+        display: inline-block;
+        font-size: 2.5rem;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-primary-text);
+        border: 1px solid white;
+        // z-index: 2;
+        clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+        height: 94%;
+        width: 94%;
+        background: var(--color-primary);
+        color: var(--color-secondary-1);
+        position: absolute;
+        top: 50.6%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    padding: 2rem 6rem;
+    top: 0rem;
+    z-index: 1000;
+
+    background-color: rgba(50, 13, 62, 0.5);
+    // box-shadow: var(--shadow-light);
+
+    @include respond(tab-land) {
+        padding: 2rem 3rem;
+    }
+    
+    @include respond(tab-port) {
+        padding: 2rem 1rem;
+    }
+    @include respond(phone) {
+        width: 100%;
+        padding: 2rem 3rem;
+        background: transparent;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        @include animationDelay;
+        height: 7rem;
+        width: 7rem;
+        position: absolute;
+        top: 0.5rem;
+        right: 2rem;
+        z-index: 2000;
+        visibility: hidden;
+        text-align: center;
+        cursor: pointer;
+        animation-name: fadeIn;
+        position: fixed;
+   
+       
+
+ 
+        @include respond(phone) {
+            visibility: visible;
+          
+        }
+
+    }
+
+
+
+
+
+    &__logo-container {
+        flex: 0 0 60%;
+
+        @include respond(tab-land) {
+           flex: 0 0 40%;
+        }
+        
+
+
+    
+    }
+
+    &__nav {
+        flex: 1;
+
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        list-style: none;
+
+        @include respond(phone) {
+            justify-content: stretch;
+        }
+
+        @include respond(phone) {
+            font-size: 2rem;
+            visibility: hidden;
+            opacity: 0;
+            position: fixed;
+            flex-direction: column;
+            height: 100vh;
+            right: 0rem;
+            top: 0rem;
+            width: 70vw;
+            transform: translateX(100rem);
+            z-index: 5;
+            transition: all .5s;
+            background-color:#200729 ;
+            padding-top: 10rem;
+        }
+
+        &>* {
+            cursor: pointer;
+            // height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include respond(phone) {
+                // height: 20%;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+
+        }
+
+    }
+
+    &__link {
+        text-decoration: none;
+        color: var(--color-primary-text);
+        padding-right: 3rem;
+        animation: moveInTop;
+        @include animationDelay;
+        span {
+         
+        }
+  
+
+        @include respond(phone) {
+             padding-top: 5rem;
+             width: 100%;
+             text-align: center;
+
+             span {
+                 display: block;
+                 padding-bottom: 1rem ;
+             }
+        }
+
+    
+
+
+        &--1 {
+            animation-duration: .5s;
+
+        }
+
+        &--2 {
+            animation-duration: .7s;
+
+        }
+
+        &--3 {
+            animation-duration: .8s;
+
+        }
+
+        &--4 {
+            animation-duration: .9s;
+
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+        text-align: right;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: var(--color-secondary-1);
+            display: inline-block;
+        }
+        &::before {
+            width: 4rem;
+        }
+        &::after {
+            width: 2rem;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked+&__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked~&__list {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+
+    &__checkbox:checked+&__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+        width: 3rem;
+    }
+
+    &__checkbox:checked+&__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+        width: 3rem;
+    }
+
+}

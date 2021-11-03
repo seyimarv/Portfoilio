@@ -1,0 +1,45 @@
+.eachskills__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.eachskills {
+    position: absolute;
+    background-color: rgb(3, 13, 27);
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+
+
+    &---mern {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &--js {
+        top: 15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &--express {
+        bottom: -15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &--node {
+        top: 50%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+
+    }
+    &--react {
+        top: 50%;
+        right: -5%;
+        transform: translate(-50%, -50%);
+
+    }
+}

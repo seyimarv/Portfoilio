@@ -1,0 +1,125 @@
+.heading-primary {
+    color:var(--color-primary-text);
+    backface-visibility: hidden;
+   
+  
+
+    &--main {
+       
+        font-size: 4.7rem;
+        font-weight: 500;
+        line-height: 5rem;
+      
+        color:#0000;
+        background:
+          linear-gradient(-90deg,  #f9e5fb 5px,#0000 0) 10px 0,
+          linear-gradient( #f9e5fb 0 0) 0 0;
+        background-size:calc(var(--n)*1ch) 200%;
+        -webkit-background-clip:padding-box,text;
+        background-clip:padding-box,text;
+        background-repeat:no-repeat;
+        animation: 
+         b .2s infinite steps(var(--n)) forwards,   
+         t calc(var(--n)*.2s) steps(var(--n)) forwards;
+
+        @include animationDelay;
+       
+    
+   
+
+
+
+        /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
+    }
+
+    &--sub {
+        display: block;
+        font-size: 1.3rem;
+        letter-spacing: .2rem;
+        font-weight: 700;
+        animation: moveInRight 1.4s ease-in, typing 4s steps(50, end);
+        overflow: hidden;
+        white-space: nowrap;
+        padding-top: 3rem;
+        line-height: 2rem;
+        @include animationDelay;
+        color: var(--color-grey-dark-2);
+
+
+    }
+}
+
+.span-primary {
+    color: var(--color-secondary-1);
+
+}
+
+// .animate-text {
+//     color:#0000 !important;
+//     padding-right: .5rem;
+//     background:
+//     linear-gradient(-90deg,#00DFFC 5px,#0000 0) 10px 0,
+//     linear-gradient(#00DFFC 0 0) 0 0;
+//   background-size:calc(var(--n)*1ch) 200%;
+//   -webkit-background-clip:padding-box,text;
+//   background-clip:padding-box,text;
+//   background-repeat:no-repeat;
+//   animation: 
+//     b .7s infinite steps(1),   
+//     t calc(var(--n)*.3s) steps(var(--n)) forwards;
+// }
+
+.heading-secondary {
+    font-size: 2.4rem;
+    color: var(--color-primary-text);
+
+
+}
+
+.paragraph--sub {
+    font-size: 1.4rem;
+    color: var(--color-grey-dark-2);
+    line-height: 2rem;
+}
+
+.paragraph--main {
+    font-size: 1.7rem;
+    color: var(--color-grey-dark-2);
+    line-height: 3rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    letter-spacing: .05rem;
+}
+
+.horizontal--line {
+    flex: 1;
+    display: inline-block;
+    margin: auto;
+    margin-left: 2rem;
+    border-top: 1px solid rgba(188, 186, 186, 0.2);
+}
+
+.highlight {
+    color: var(--color-secondary-1);
+}
+
+.svg__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: var(--color-grey-dark-2);
+    transition: all .2s;
+    cursor: pointer;
+
+    &:hover {
+        fill: var(--color-secondary-1);
+    }
+}
+
+.svg-large {
+    height: 4.25rem;
+    width: 4.25rem;
+    fill: var(--color-secondary-1);
+}
