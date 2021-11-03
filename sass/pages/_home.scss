@@ -98,6 +98,7 @@
 .section-projects {
     padding: 10rem 0rem;
     // height: 150vh;
+    overflow-y: hidden;
 
 
     @include respond(tab-port) {
@@ -116,6 +117,8 @@
         display: flex;
         padding: 6rem 0rem;
         position: relative;
+
+        overflow-y: hidden;
   
 
 

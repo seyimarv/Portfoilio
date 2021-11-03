@@ -642,7 +642,8 @@ main {
       color: var(--color-primary-text); }
 
 .section-projects {
-  padding: 10rem 0rem; }
+  padding: 10rem 0rem;
+  overflow-y: hidden; }
   @media only screen and (max-width: 56.25em) {
     .section-projects {
       overflow-x: hidden;
@@ -653,7 +654,8 @@ main {
   .section-projects--item {
     display: flex;
     padding: 6rem 0rem;
-    position: relative; }
+    position: relative;
+    overflow-y: hidden; }
     @media only screen and (max-width: 37.5em) {
       .section-projects--item {
         margin-bottom: 1rem;
